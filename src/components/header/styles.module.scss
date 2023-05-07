@@ -1,0 +1,83 @@
+@import "../../styles/variables";
+
+.header {
+  background-color: $header-bg;
+
+  & > nav {
+    width: 100%;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex;
+
+      li {
+        list-style-type: none;
+
+        a {
+          display: flex;
+          height: 70px;
+          align-items: center;
+          padding-inline: 10px;
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          .avatar {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    & > div {
+      border: 1px solid darken($color: #fff, $amount: 70%);
+      border-radius: 6px;
+      position: relative;
+
+      .icon,
+      .slash {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        color: darken($color: #fff, $amount: 50%);
+      }
+
+      .slash {
+        left: unset;
+        right: 10px;
+      }
+
+      input {
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        padding: 5px 35px 5px 35px;
+        font-size: 1rem;
+        width: 300px;
+        height: 32px;
+      }
+    }
+
+    color: white;
+  }
+}

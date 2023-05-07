@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.username {
+  margin: 50px 0 10px 0;
+  min-width: 300px;
+}
+.button {
+  text-align: center;
+}

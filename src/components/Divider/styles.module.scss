@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: lighten($muted, 45%);
+}

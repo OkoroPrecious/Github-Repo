@@ -1,0 +1,74 @@
+@import "../../styles/variables";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(256px, 300px) minmax(0, 1fr);
+  gap: 40px;
+
+  @media (min-width: 1200px) {
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  }
+}
+
+.repos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.repo {
+  display: flex;
+  justify-content: space-between;
+
+  .title, .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $muted;
+    font-size: 0.85rem;
+
+    &.info {
+      margin-top: 10px;
+      gap: 20px;
+
+      .stack {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        & > div {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $yellow;
+        }
+      }
+    }
+
+    h3 > a {
+      color: $link;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 1;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p.status {
+      color: $muted;
+      border: 1px solid lighten($muted, 30%);
+      padding: 2px 10px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+    }
+  }
+}
+.filter {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}

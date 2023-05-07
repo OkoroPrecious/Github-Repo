@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+.button {
+  background-color: $light-bg;
+  color: $btn-text;
+  border: 1px solid #1f232826;
+  border-radius: 6px;
+  outline: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 8px 16px;
+  box-shadow: 0 1px 0 rgba(31, 35, 40, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($light-bg, 2%);
+  }
+
+  &.primary {
+    background-color: #1f883d;
+    color: #fff;
+
+    &:hover {
+      background-color: darken(#1f883d, 3%);
+    }
+  }
+}
